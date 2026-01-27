@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ========================= */
+  /* 🌿 VERDES PRINCIPAIS (IMC) */
+  /* ========================= */
+
+  --color-green-main: #2ECC71;   /* Cor principal */
+  --color-green-dark: #27AE60;   /* Hover / destaque */
+  --color-green-light: #E9F9F1;  /* Fundo suave */
+  --color-green-border: #B7EACD; /* Bordas suaves */
+
+  /* ========================= */
+  /* 🎯 CORES DE APOIO */
+  /* ========================= */
+
+  --color-bg-main: #F5F7FA;      /* Fundo geral da página */
+  --color-text-main: #2C3E50;    /* Texto principal */
+  --color-text-light: #FFFFFF;   /* Texto sobre fundo verde */
+
+  /* ========================= */
+  /* 🚦 CORES PARA STATUS IMC */
+  /* ========================= */
+
+  --color-underweight: #F1C40F;  /* Abaixo do peso */
+  --color-normal: #2ECC71;       /* Peso normal */
+  --color-overweight: #E67E22;   /* Sobrepeso */
+  --color-obesity: #E74C3C;      /* Obesidade */
+}

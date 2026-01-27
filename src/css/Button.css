@@ -1,0 +1,50 @@
+/* ========================= */
+/* BOTÃO CALCULAR (PRINCIPAL) */
+/* ========================= */
+
+#calc-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--color-green-main);
+  color: var(--color-text-light);
+  transition: all 0.2s ease-in-out;
+}
+
+#calc-btn:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(39, 174, 96, 0.25);
+}
+
+#calc-btn:active {
+  transform: scale(0.98);
+}
+
+/* ========================= */
+/* BOTÃO LIMPAR (SECUNDÁRIO) */
+/* ========================= */
+
+#clear-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid var(--color-green-main);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-green-main);
+  transition: all 0.2s ease-in-out;
+}
+
+#clear-btn:hover {
+  background-color: var(--color-green-light);
+  transform: translateY(-2px);
+}
+
+#clear-btn:active {
+  transform: scale(0.98);
+}

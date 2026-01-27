@@ -1,0 +1,181 @@
+/* ============================= */
+/* RESULTADO IMC */
+/* ============================= */
+
+#result-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Animação de entrada */
+  animation: fadeInUp 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#result-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* Número do IMC */
+/* ============================= */
+
+#imc-number {
+  font-size: 1.6rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+#imc-number span {
+  font-weight: bold;
+  font-size: 2rem;
+  display: inline-block;
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); }
+  70% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Texto da situação */
+#imc-info {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================= */
+/* Título */
+/* ============================= */
+
+#result-container h3 {
+  margin: 1.5rem 0 1rem;
+  color: var(--color-text-main);
+}
+
+/* ============================= */
+/* TABELA */
+/* ============================= */
+
+#imc-table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-green-border);
+}
+
+/* Cabeçalho */
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--color-green-main);
+  color: var(--color-text-light);
+  padding: 0.8rem 0;
+  font-weight: bold;
+}
+
+/* Linhas */
+.table-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--color-green-border);
+  background-color: var(--color-green-light);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.table-data:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.table-data:hover {
+  background-color: #dff6ea;
+  transform: scale(1.01);
+}
+
+/* Barra lateral animada */
+.table-data::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--color-green-main);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.2s ease;
+}
+
+.table-data:hover::before {
+  transform: scaleY(1);
+}
+
+/* ============================= */
+/* CORES DINÂMICAS DO RESULTADO */
+/* ============================= */
+
+.medium,
+.good,
+.low,
+.high {
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.medium { color: var(--color-underweight); }
+.good { color: var(--color-normal); }
+.low { color: var(--color-overweight); }
+.high { color: var(--color-obesity); }
+
+.medium:hover,
+.good:hover,
+.low:hover,
+.high:hover {
+  transform: scale(1.08);
+}
+
+/* ============================= */
+/* BOTÃO VOLTAR */
+/* ============================= */
+
+#back-btn {
+  margin-top: 1.5rem;
+  background-color: var(--color-green-main);
+  color: var(--color-text-light);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#back-btn:hover {
+  background-color: var(--color-green-dark);
+  transform: translateY(-2px);
+}
+
+#back-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
