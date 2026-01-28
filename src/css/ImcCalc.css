@@ -61,3 +61,43 @@ select:focus {
   background-color: #ffffff;
   box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
 }
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .imc-container {
+    margin: 30px auto;
+    padding: 1.4rem;
+    border-radius: 8px;
+  }
+
+  .imc-container h2 {
+    font-size: 1.4rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input,
+  select {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .imc-container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .imc-container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
