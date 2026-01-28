@@ -35,3 +35,9 @@ npm install
 
 # Inicie o projeto
 npm run dev
+```
+
+## 📝 Licença
+- Setup inicial [Matheus Battisti].
+---
+Feito com 💙 por [Guilherme Alves](https://github.com/DevsAlves) 🚀
